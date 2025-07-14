@@ -1,4 +1,6 @@
-﻿namespace Dot_Net_Core_Web_APIs.Extensions
+﻿using Contracts;
+
+namespace Dot_Net_Core_Web_APIs.Extensions
 {
     public static class ServiceExtensions
     {
@@ -14,11 +16,9 @@
         public static void ConfigureIISIntegration(this IServiceCollection services) =>
             services.Configure<IISOptions>(options =>
             {
-
             });
 
-
+        public static void ConfigureLoggerService(this IServiceCollection services) =>
+            services.AddSingleton<ILoggerManager, LoggerManager>();
     }
-
-
 }
