@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service.Contracts", "Servic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{DA17D3AF-F52E-4EF0-B6E1-778BA34637CA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCoreWebAPIs.Presentation", "DotNetCoreWebAPIs.Presentation\DotNetCoreWebAPIs.Presentation.csproj", "{F877B96E-E897-4412-A262-DF60656F473D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{A46F1BDA-1FE2-498A-AC5D-3C3FAD130239}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{DA17D3AF-F52E-4EF0-B6E1-778BA34637CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA17D3AF-F52E-4EF0-B6E1-778BA34637CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA17D3AF-F52E-4EF0-B6E1-778BA34637CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F877B96E-E897-4412-A262-DF60656F473D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F877B96E-E897-4412-A262-DF60656F473D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F877B96E-E897-4412-A262-DF60656F473D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F877B96E-E897-4412-A262-DF60656F473D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A46F1BDA-1FE2-498A-AC5D-3C3FAD130239}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A46F1BDA-1FE2-498A-AC5D-3C3FAD130239}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A46F1BDA-1FE2-498A-AC5D-3C3FAD130239}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A46F1BDA-1FE2-498A-AC5D-3C3FAD130239}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

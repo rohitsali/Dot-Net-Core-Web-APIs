@@ -1,6 +1,7 @@
 using Dot_Net_Core_Web_APIs.Extensions;
 using Microsoft.AspNetCore.HttpOverrides;
 using NLog;
+using System.Reflection.Metadata;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,7 +17,8 @@ builder.Services.ConfigureRepositoryManager();
 builder.Services.ConfigureSericeManager();
 builder.Services.ConfigureSqlContext(builder.Configuration);
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddApplicationPart(typeof(DotNetCoreWebAPIs.Presentation.AssemblyReference).Assembly);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
