@@ -27,14 +27,5 @@ namespace DotNetCoreWebAPIs.Presentation.Controllers
                 return StatusCode(500, "Internal server error");
             }
         }
-
-        //   var result = collection
-        //  .Where(...)               // 1. Filter data
-        //  .GroupBy(...)             // 2. Group filtered data
-        //  .Where(...)               // 3. Filter groups (optional)
-        //  .Select(...)              // 4. Project result (transform data)
-        //  .OrderBy(...)             // 5. Sort results
-        //  .Take(...)                // 6. Take top N (pagination or limit)
-        //  .ToList();                // 7. Execute query and materialize
     }
 }
