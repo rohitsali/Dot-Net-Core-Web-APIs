@@ -1,3 +1,4 @@
+using Contracts;
 using Dot_Net_Core_Web_APIs.Extensions;
 using Microsoft.AspNetCore.HttpOverrides;
 using NLog;
@@ -26,10 +27,17 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+var logger = app.Services.GetRequiredService<ILoggerManager>();
+app.ConfigureExceptionHandler(logger);
+
+if (app.Environment.IsProduction())
+    app.UseHsts();
+
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseDeveloperExceptionPage();
+    //app.UseDeveloperExceptionPage();
     app.UseSwagger();
     app.UseSwaggerUI();
 }
