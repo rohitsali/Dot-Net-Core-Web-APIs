@@ -10,6 +10,10 @@ namespace Dot_Net_Core_Web_APIs
         {
             CreateMap<Company, CompanyDto>()
                 .ForCtorParam("FullAddress", opt => opt.MapFrom(x => string.Join(' ', x.Address, x.Country)));
+
+            CreateMap<Employee, EmployeeDto>();
         }
+
+
     }
 }
