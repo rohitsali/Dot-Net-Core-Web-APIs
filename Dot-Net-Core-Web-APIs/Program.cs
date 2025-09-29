@@ -19,8 +19,16 @@ builder.Services.ConfigureSericeManager();
 builder.Services.ConfigureSqlContext(builder.Configuration);
 builder.Services.AddAutoMapper(typeof(Program));
 
-builder.Services.AddControllers()
+builder.Services.AddControllers(config =>
+{
+    config.RespectBrowserAcceptHeader = true;
+    config.ReturnHttpNotAcceptable = true;
+})
+    .AddXmlDataContractSerializerFormatters()
+    .AddCustomCSVFormatter()
     .AddApplicationPart(typeof(DotNetCoreWebAPIs.Presentation.AssemblyReference).Assembly);
+
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

@@ -9,11 +9,11 @@ namespace Dot_Net_Core_Web_APIs
         public MappingProfile()
         {
             CreateMap<Company, CompanyDto>()
-                .ForCtorParam("FullAddress", opt => opt.MapFrom(x => string.Join(' ', x.Address, x.Country)));
+                //.ForCtorParam("FullAddress",
+                .ForMember(c => c.FullAddress,
+                opt => opt.MapFrom(x => string.Join(' ', x.Address, x.Country)));
 
             CreateMap<Employee, EmployeeDto>();
         }
-
-
     }
 }
